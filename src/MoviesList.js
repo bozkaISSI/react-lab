@@ -1,33 +1,44 @@
 import Movie from "./Movie";
-import { FaTrash } from "react-icons/fa";
+import {FaFilm} from "react-icons/fa";
+import {FaTrashCan} from "react-icons/fa6";
 
 export default function MoviesList({ movies, onRemoveMovie }) {
     return (
         <div>
             <h2>Movies List</h2>
-            <ul>
+            <ul style={{listStyleType: "none", padding: 0}}>
                 {movies.map((movie, index) => (
-                    <li
+                    <div
                         key={index}
                         style={{
                             display: "flex",
                             alignItems: "center",
                             padding: "5px 0",
                         }}
-                    >
+                        >
                         <span style={{display: "flex", alignItems: "center"}}>
+                            <FaFilm
+                                style={{
+                                    marginRight: "10px",
+                                    color: "black",
+                                    fontSize: "20px",
+                                    marginBottom: "1.0rem",
+                                }}
+                            />
                             <Movie title={movie.title} year={movie.year}/>
                         </span>
-                        <FaTrash
+                        <FaTrashCan
                             onClick={() => onRemoveMovie(index)}
                             style={{
-                                color: "grey",
+                                color: "red",
                                 cursor: "pointer",
                                 fontSize: "20px",
+                                marginBottom: "1.0rem",
+                                marginLeft: "1.0rem",
                             }}
                             title="Remove movie"
                         />
-                    </li>
+                    </div>
                 ))}
             </ul>
         </div>
