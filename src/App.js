@@ -4,6 +4,7 @@ import MovieForm from "./MovieForm";
 import "milligram";
 
 function App() {
+    const appStyle = {marginLeft: "1.3rem", marginTop: "1.3rem"};
     const [movies, setMovies] = useState([]);
     const [showForm, setShowForm] = useState(false);
 
@@ -21,14 +22,14 @@ function App() {
     }
 
     return (
-        <div>
+        <div style={appStyle}>
             <h1>My Favourite Movies to Watch</h1>
-
             {movies.length === 0 ? (
                 <p>No movies added yet. Add your first movie!</p>
-            ) : (
-                <MoviesList movies={movies} onRemoveMovie={removeMovie} />
-            )}
+                ) : (
+                    <MoviesList movies={movies} onRemoveMovie={removeMovie} />
+                )
+            }
 
             {!showForm && (
                 <button onClick={() => setShowForm(true)}>Add a Movie</button>
