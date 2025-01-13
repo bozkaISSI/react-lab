@@ -20,7 +20,7 @@ export default function MoviesList({ movies, onRemoveMovie }) {
                             <FaFilm
                                 style={{
                                     marginRight: "10px",
-                                    color: "black",
+                                    color: "#9b4dca",
                                     fontSize: "20px",
                                     marginBottom: "1.0rem",
                                 }}
@@ -30,7 +30,7 @@ export default function MoviesList({ movies, onRemoveMovie }) {
                         <FaTrashCan
                             onClick={() => onRemoveMovie(index)}
                             style={{
-                                color: "red",
+                                color: "#e64949",
                                 cursor: "pointer",
                                 fontSize: "20px",
                                 marginBottom: "1.0rem",
