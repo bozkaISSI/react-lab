@@ -5,7 +5,7 @@ import {FaTrashCan} from "react-icons/fa6";
 export default function MoviesList({ movies, onRemoveMovie }) {
     return (
         <div>
-            <h2>Movies List</h2>
+            <h3>Movies List</h3>
             <ul style={{listStyleType: "none", padding: 0}}>
                 {movies.map((movie, index) => (
                     <div

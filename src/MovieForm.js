@@ -60,7 +60,7 @@ export default function MovieForm(props) {
                     onChange={handleTitleChange}
                     required
                 />
-                <p>{titleMessage}</p>
+                <p style={{ color: '#9b4dca', fontSize: '12px' }}>{titleMessage}</p>
             </div>
             <div>
                 <label>Year</label>
@@ -70,7 +70,7 @@ export default function MovieForm(props) {
                     onChange={handleYearChange}
                     required
                 />
-                <p>{yearMessage}</p>
+                <p style={{ color: '#9b4dca', fontSize: '12px' }}>{yearMessage}</p>
             </div>
             <button>Add a movie</button>
         </form>
